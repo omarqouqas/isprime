@@ -32,26 +32,31 @@ def index():
 
 
 def is_prime(number):
-    if number == 2:  # 2 is considered as a prime number
-        return number, " is a Prime number"
-    elif int(number) == 0 or int(number) == 1:
-        return number, " is not Prime "
-    elif int(number) % 2 == 0:
-        return number, " is not a Prime number since ", number, " is divisive by 2", number, "/", 2, " = ", int(
-            number) / 2
-    elif int(number) > 3 and int(number) % 3 == 0:
-        return number, " is not a Prime number since ", number, " is divisive by 3", number, "/", 3, " = ", int(
-            number) / 3
-    elif int(number) > 5 and int(number) % 5 == 0:
-        return number, " is not a Prime number since ", number, " is divisive by 5", number, "/", 5, " = ", int(
-            number) / 5
-    elif int(number) > 7 and int(number) % 7 == 0:
-        return number, " is not a Prime number since ", number, " is divisive by 7", number, "/", 7, " = ", int(
-            number) / 7
-    elif int(number) < 0:  # negative numbers are not prime
-        return number, " is not a prime number since ", number, " is less than 0"
-    else:
-        return number, " is a Prime number since ", number, " is divisive by itself and 1"
+    while True:
+        try:
+            if number == 2:  # 2 is considered as a prime number
+                return number, " is a Prime number"
+            elif int(number) == 0 or int(number) == 1:
+                return number, " is not Prime "
+            elif int(number) % 2 == 0:
+                return number, " is not a Prime number since ", number, " is divisive by 2", number, "/", 2, " = ", int(
+                    number) / 2
+            elif int(number) > 3 and int(number) % 3 == 0:
+                return number, " is not a Prime number since ", number, " is divisive by 3", number, "/", 3, " = ", int(
+                    number) / 3
+            elif int(number) > 5 and int(number) % 5 == 0:
+                return number, " is not a Prime number since ", number, " is divisive by 5", number, "/", 5, " = ", int(
+                    number) / 5
+            elif int(number) > 7 and int(number) % 7 == 0:
+                return number, " is not a Prime number since ", number, " is divisive by 7", number, "/", 7, " = ", int(
+                    number) / 7
+            elif int(number) < 0:  # negative numbers are not prime
+                return number, " is not a prime number since ", number, " is less than 0"
+            else:
+                return number, " is a Prime number since ", number, " is divisive by itself and 1"
+        except ValueError:
+            return number, " Is not a valid input. You need to enter an integer!"
+
 
 
 if __name__ == "__main__":
