@@ -25,6 +25,7 @@ def index():
     number = request.args.get("number", "")
     if number:
         isitprime = str(is_prime(number))
+        # print(isitprime)
     else:
         isitprime = ""
 
@@ -58,7 +59,5 @@ def is_prime(number):
             return number, " Is not a valid input. You need to enter an integer!"
 
 
-
 if __name__ == "__main__":
     app.run(host="127.0.0.1", port=8080, debug=True)
-# print(is_prime(number))
