@@ -1,10 +1,10 @@
 from flask import Flask
 from flask import request
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
-@app.route("/")
+@application.route("/")
 def index():
     html_form = """
         <html><body>
@@ -61,4 +61,4 @@ def is_prime(number):
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=8080, debug=True)
+    application.run(host="127.0.0.1", port=8080, debug=True)
