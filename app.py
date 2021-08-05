@@ -16,6 +16,7 @@ def index():
                 </div>
             <br>
             <br>
+            <br>
             <form action="" method="get">
             Number: <input type="text" name="number">
             <input type="submit" value="Is it prime?">
