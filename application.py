@@ -36,7 +36,7 @@ def is_prime(number):
     while True:
         try:
             if number == 2:  # 2 is considered as a prime number
-                return number, " is a Prime number"
+                return number, " is a Prime number."
             elif int(number) == 0 or int(number) == 1:
                 return number, " is not Prime "
             elif int(number) % 2 == 0:
