@@ -39,7 +39,7 @@ def is_prime(number):
                 return number, " is a Prime number"
             elif int(number) == 0 or int(number) == 1:
                 return number, " is not Prime "
-            elif int(number) % 2 == 0:
+            elif int(number) % 2 == 0 and int(number) != 2:
                 return number, " is not a Prime number since ", number, " is divisive by 2", number, "/", 2, " = ", int(
                     number) / 2
             elif int(number) > 3 and int(number) % 3 == 0:
