@@ -8,7 +8,7 @@ application = Flask(__name__)
 def index():
     html_form = """
         <html><body>
-            <h1> Enter a number to find out whether it is a prime number! </h1>
+            <h1> Enter a number to find out whether it is a prime number, Elastic Beanstalk is awesome! </h1>
                 <div> To prove whether a number is a prime number, first try dividing it by 2,
                     and see if you get a whole number. If you do, it can't be a prime number.
                     If you don't get a whole number, next try dividing it by prime numbers: 3, 5, 7, 11 (9 is divisible by 3)
@@ -36,7 +36,7 @@ def is_prime(number):
     while True:
         try:
             if number == 2:  # 2 is considered as a prime number
-                return number, " is a Prime number"
+                return number, " is a Prime number."
             elif int(number) == 0 or int(number) == 1:
                 return number, " is not Prime "
             elif int(number) % 2 == 0 and int(number) != 2:
@@ -60,4 +60,4 @@ def is_prime(number):
 
 
 if __name__ == "__main__":
-    application.run(host="127.0.0.1", port=8080, debug=True)
+    application.run(debug=True)
