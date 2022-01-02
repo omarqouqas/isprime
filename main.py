@@ -54,7 +54,7 @@ def is_prime(number):
             elif int(number) < 0:  # negative numbers are not prime
                 return str(number) + " is not a Prime number because " + str(number) + " is less than 0"
             else:
-                return str(number) + " is a Prime number because it is divisive by itself and 1"
+                return str(number) + " is a Prime number because it is divisible by itself and 1"
         except ValueError:
             return str(number) + " is not a valid input. You need to enter an integer!"
 
