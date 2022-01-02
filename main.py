@@ -38,7 +38,7 @@ def is_prime(number):
             if number == 2:  # 2 is considered as a prime number
                 return str(number) + " is a Prime number."
             elif int(number) == 0 or int(number) == 1:
-                return number+" is not a Prime number"
+                return str(number) + " is not a Prime number."
             elif int(number) % 2 == 0 and int(number) != 2:
                 return str(number) + " is not a Prime number because it is divisible by 2. " + str(number) +\
                        "/" + str(2) + " = " + str(int(number) / 2)
