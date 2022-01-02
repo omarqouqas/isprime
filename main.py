@@ -8,7 +8,7 @@ app = Flask(__name__)
 def index():
     html_form = """
         <html><body>
-            <h1> Enter a number to find out whether it is a prime number, Elastic Beanstalk is awesome! </h1>
+            <h1> Enter a number to find out whether it is a prime number. Google App Engine is awesome! </h1>
                 <div> To prove whether a number is a prime number, first try dividing it by 2,
                     and see if you get a whole number. If you do, it can't be a prime number.
                     If you don't get a whole number, next try dividing it by prime numbers: 3, 5, 7, 11 (9 is divisible by 3)
@@ -36,27 +36,27 @@ def is_prime(number):
     while True:
         try:
             if number == 2:  # 2 is considered as a prime number
-                return number, " is a Prime number."
+                return str(number) + " is a Prime number."
             elif int(number) == 0 or int(number) == 1:
-                return number, " is not Prime "
+                return number+" is not a Prime number"
             elif int(number) % 2 == 0 and int(number) != 2:
-                return number, " is not a Prime number since ", number, " is divisive by 2", number, "/", 2, " = ", int(
-                    number) / 2
+                return str(number) + " is not a Prime number because it is divisible by 2. " + str(number) +\
+                       "/" + str(2) + " = " + str(int(number) / 2)
             elif int(number) > 3 and int(number) % 3 == 0:
-                return number, " is not a Prime number since ", number, " is divisive by 3", number, "/", 3, " = ", int(
-                    number) / 3
+                return str(number) + " is not a Prime number because it is divisible by 3. " + str(number) +\
+                       "/" + str(3) + " = " + str(int(number) / 3)
             elif int(number) > 5 and int(number) % 5 == 0:
-                return number, " is not a Prime number since ", number, " is divisive by 5", number, "/", 5, " = ", int(
-                    number) / 5
+                return str(number) + " is not a Prime number because it is divisible by 5. " + str(number) +\
+                       "/" + str(5) + " = " + str(int(number) / 5)
             elif int(number) > 7 and int(number) % 7 == 0:
-                return number, " is not a Prime number since ", number, " is divisive by 7", number, "/", 7, " = ", int(
-                    number) / 7
+                return str(number) + " is not a Prime number because it is divisible by 7. " + str(number) +\
+                       "/" + str(7) + " = " + str(int(number) / 7)
             elif int(number) < 0:  # negative numbers are not prime
-                return number, " is not a prime number since ", number, " is less than 0"
+                return str(number) + " is not a Prime number because " + str(number) + " is less than 0"
             else:
-                return number, " is a Prime number since ", number, " is divisive by itself and 1"
+                return str(number) + " is a Prime number because it is divisive by itself and 1"
         except ValueError:
-            return number, " Is not a valid input. You need to enter an integer!"
+            return str(number) + " is not a valid input. You need to enter an integer!"
 
 
 if __name__ == "__main__":
